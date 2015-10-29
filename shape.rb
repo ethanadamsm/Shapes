@@ -1,21 +1,30 @@
 class Shape
 
-	def initialize(width, height, x, y)
+	def initialize(width, height)
 		@width = width
 		@height = height
-		@x = x
-		@y = y
 		@lines = []
+		@center = nil
 	end
 
-	def draw
-		@lines.each do |line|
+	def draw_fill
+		@center.each do |line|
 			line.draw
 		end
 	end	
 
-	def add_lines(lines)
-		@lines = lines
+	def draw_stroke
+		@lines.each do |line|
+			line.draw
+		end
+	end
+
+	def add_line(line)
+		@lines.push(line)
+	end
+
+	def add_center(center)
+		@center = center
 	end
 
 end
