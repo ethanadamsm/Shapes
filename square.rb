@@ -4,12 +4,8 @@ require_relative "rectangle"
 
 class Square < Rectangle
 
-	def initialize(x, y, w, color)
-		super(w, w, x, y, color)
-	end
-
-	def draw()
-		super.draw
+	def initialize(x, y, w, color, color2)
+		super(x, y, w, w, color, color2)
 	end
 
 end
